@@ -1,3 +1,4 @@
 ## Carbon Fields
 
-the theme require carbon field plugin (or composer installation): [Carbon Fields Plugin Download](https://docs.carbonfields.net/plugin-quickstart.html#without-composer)
+the theme require carbon field plugin (or composer installation): [Carbon Fields Plugin Download](https://docs.carbonfields.net/plugin-quickstart.html#without-composer).
+See the example in inc/carbon.php
