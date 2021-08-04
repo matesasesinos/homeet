@@ -5,17 +5,26 @@ class Homeet_Functions
     public function __construct()
     {
         // style and scripts
-        add_action('wp_enqueue_scripts', [$this, 'bootscore_5_child_enqueue_styles']);
+        add_action('wp_enqueue_scripts', [$this, 'homeet_styles']);
+        add_action('wp_enqueue_scripts', [$this, 'homeet_scripts']);
+
+        //require styles
+        $this->require();
     }
 
-    public function bootscore_5_child_enqueue_styles()
+    public function homeet_styles()
     {
-
-        // style.css
         wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    }
 
-        // custom.js
+    public function homeet_scripts()
+    {
         wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
+    }
+
+    public function require()
+    {
+        require __DIR__.'/inc/carbon.php';
     }
 }
 
